@@ -1,0 +1,9 @@
+#Ping
+ping IP address/website URL
+
+	Ping uses ICMP (Internet Control Message Protocol) packets to determine the performance of a connection between devices
+Example check if the connection exists or is reliable.
+
+	The time taken for ICMP packets travelling between devices is measured by ping
+
+ 

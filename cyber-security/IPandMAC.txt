@@ -1,0 +1,38 @@
+IP addresses (Internet Protocol)
+192.168.1.0-255
+	An IP address is a set of numbers that are divided into four octets
+	Depending on where they are will determine what type of IP address they have:
+	
+	public or private IP address
+	
+	A public address is used to identify the device in the internet:
+Ex: 	86.157.52.21 --IPv4
+	2a00:22c4:a531:c500:425f:cce6:c36b:f64d -- IPv6 
+
+	A private address is used to identify a device amongst other devices
+Ex:	192.168.1.5
+
+MAC Addresses (Media Access Control)
+a4:c3:f0:85:ac:2d
+
+	Devices on a network will all have a physical network interface, which is a microchip board found on the device's motherboard. This network interface is assigned a upique address at the factory it was bult
+	The first six characters represent the company that made the network interface
+	The last six is a unique number.
+
+
+	MAC addresses can be faked or "spoofed" in a process known as spoofing.
+	Điều này xảy ra khi một thiết bị giả danh bằng cách sử dụng địa chỉ MAC của thiết bị khác
+	Khi điều này xảy ra, các thiết bị khác kết nối với thiết bị qua địa chỉ MAC sẽ không biết địa chỉ MAC đó đã bị thiết bị khác giả danh.
+
+ 
+The ARP protocol (Address Resolution Protocol)
+
+	ARP is responsible for allowing devices to identify themselves on a network.
+	When an ARP request is sent, a message is broadcasted to every other device found on a network by the device, asking whether or not the device's MAC address matches the requested IP address. If the device does have the requested IP address, an ARP reply is returned to the initial device to acknowledge this. The initial device will now remember this and store it within its cache (an ARP entry). 
+
+
+The DHCP protocol (Dynamic Host Configuration Protocol)
+
+	IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a DHCP (Dynamic Host Configuration Protocol) server. When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (DHCP Discover) to see if any DHCP servers are on the network. The DHCP server then replies back with an IP address the device could use (DHCP Offer). The device then sends a reply confirming it wants the offered IP Address (DHCP Request), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (DHCP ACK).
+ 
+

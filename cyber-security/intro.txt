@@ -1,0 +1,22 @@
+ECONNAISSANCE
+_Passive: finding publicly available information
+_Active: trying to prop directly into the system, looking at fingerprinting, reconnaisance
+
+WEAPONIZATION
+_allow us to see what kind of payload we can create
+
+DELIVERY
+_thinking about how are we going to delivery the payload into the victim
+
+EXPLOITATION
+_the detonation of the payload
+
+INSTALLATION
+_payload again we create persistance so that can be latch onto the computer system
+
+COMMAND & CONTROL 
+_any devices we hack into call 'bots'
+_Bot herher allow you to control bots
+ACTION & OBJECTIVES
+
+

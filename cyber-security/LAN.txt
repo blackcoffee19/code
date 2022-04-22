@@ -1,0 +1,71 @@
+*Topology: cấu trúc liên kết
+
+LOCAL AREA NETWORK (LAN) Topologies
+
+	Start Topology
+
+	[device]    [device]    [device]
+		\	|	/
+		 \ 	|     /
+		  \	|   /
+	[device]---[switch] ------[device]
+
+	Devices are individually connected via a central networking device such as a switch or hub
+	Advantages: reliability and scalability
+	Disadvantages: expensive
+	If the centralised hardware the connects devices fails, these devices no longer be able to send or receive data.
+
+	Bus Topology
+
+
+	[device]	[device]	[device]
+	   |		   |		   |
+	___L_______________L_______________L___
+		|		|
+	      [device]	      [device]
+
+	Advantage: cost-efficient
+	Disadvantages: It's very quickly prone to becoming slow and bottlenecked if devices within the topology are simultaneously requesting data. (Dễ bị chậm và tắt nghẽn)
+	This bottleneck alse results in very difficult troubleshooting because it quickly becomes diffucult to identify which device is experiencing issues with data all travelling along the same route. (khó sửa chữa do khó xác định thiết bị nào gặp trục trặc trong toàn cấu trúc liên kết)
+	There is little redundancy in place in case of failures. Because there is a single point of failure along backbone cable. If this cable were to break, devices can no longer receive or transmit data along the bus.(chỉ có 1 cáp chính nên khi 1 đoạn cáp hỏng, tất cả dữ liệu sẽ không thể truyền đi).
+			
+
+	Ring Topology 
+
+		[device]
+	      /          \
+	[device]	[device]
+	       \	/	
+		[device]
+
+	Advantage: Easy to troubleshoot, less prone to bottlenecks.
+	Disadvantage: cut cable or broken device will result in the entire networking breaking.
+
+
+SWITCH
+	Switches are dedicated devices within a network that are designed to aggregate multiple other devices such as computers, printersm or any other networking-capable device using ethernet. These various devices plug into a switch's port.
+
+ROUTER
+	It's a router's job to connect networks and pass data between them. It does this by using routing
+
+	Both Switches and Routers can be connected to be one another.
+
+
+Subnets
+	Subnetting is the term given to splitting up a network into smaller, miniature networks within itself.
+	Network administrators use subnetting to categorise and assign specific parts of a network to reflect this.
+	Subnets use IP addresses in 3 ways:
+	.Identify the network address
+		This address identifies the start of the actual network and used to identify a network's existence
+	Ex:	A device with the IP address of 192.168.1.12 will be on the network identified by 192.168.1.0
+
+	.Identify the host address
+		An IP address here is used to identify a device on the submet
+	Ex:	A device will have the network address of 192.168.1.12
+
+	.Identify the default gateway
+		The default gateway address is a special address assigned to a device on the network that is capable of sending information to another network
+	Ex:	Any data that needs to go to a device that isn't on the same network (i.e. isnt on 192.168.1.0) will be sent to this device. These devices can use any host address but usually use either the first or last host address in a network (.1 or .254) 
+
+
+
