@@ -1,0 +1,15 @@
+/home/blackcoffee/code/C#/moneymarket/bin/Debug/net6.0/moneymarket
+/home/blackcoffee/code/C#/moneymarket/bin/Debug/net6.0/moneymarket.deps.json
+/home/blackcoffee/code/C#/moneymarket/bin/Debug/net6.0/moneymarket.runtimeconfig.json
+/home/blackcoffee/code/C#/moneymarket/bin/Debug/net6.0/moneymarket.dll
+/home/blackcoffee/code/C#/moneymarket/bin/Debug/net6.0/moneymarket.pdb
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.csproj.AssemblyReference.cache
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.GeneratedMSBuildEditorConfig.editorconfig
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.AssemblyInfoInputs.cache
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.AssemblyInfo.cs
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.csproj.CoreCompileInputs.cache
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.dll
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/refint/moneymarket.dll
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.pdb
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/moneymarket.genruntimeconfig.cache
+/home/blackcoffee/code/C#/moneymarket/obj/Debug/net6.0/ref/moneymarket.dll
