@@ -1,0 +1,15 @@
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.csproj.AssemblyReference.cache
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.GeneratedMSBuildEditorConfig.editorconfig
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.AssemblyInfoInputs.cache
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.AssemblyInfo.cs
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.csproj.CoreCompileInputs.cache
+/home/blackcoffee/code/C#/TrueOrFalse/bin/Debug/net6.0/TrueOrFalse
+/home/blackcoffee/code/C#/TrueOrFalse/bin/Debug/net6.0/TrueOrFalse.deps.json
+/home/blackcoffee/code/C#/TrueOrFalse/bin/Debug/net6.0/TrueOrFalse.runtimeconfig.json
+/home/blackcoffee/code/C#/TrueOrFalse/bin/Debug/net6.0/TrueOrFalse.dll
+/home/blackcoffee/code/C#/TrueOrFalse/bin/Debug/net6.0/TrueOrFalse.pdb
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.dll
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/refint/TrueOrFalse.dll
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.pdb
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/TrueOrFalse.genruntimeconfig.cache
+/home/blackcoffee/code/C#/TrueOrFalse/obj/Debug/net6.0/ref/TrueOrFalse.dll
