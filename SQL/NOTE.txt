@@ -1,0 +1,11 @@
+#How enter a sqlite?
+SOLUTION:
+in command-line type: sqlite <name file .sqlite>
+
+
+#if you forget or dont know what tables in sqlite 
+SOLUTION:
+.tables => print tables's name
+.schema => print tables's name, their columns and type of them
+
+
