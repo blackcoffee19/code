@@ -25,3 +25,4 @@ if(enterANum) {
 } else {
   Console.WriteLine("You were not input a number..");
 }; 
+
