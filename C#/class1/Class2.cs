@@ -10,15 +10,13 @@ namespace Class
         static int count;
 
 
-
         //CONSTRUCTORS
         public Bank(string client, int id) {
             this.Name= client;
             CheckID(id);
-            this.ID = id; 
         }
         public Bank(string client) : this(client, 0) {
-            Console.WriteLine("Create a account.");
+            Console.WriteLine("Create a account...");
             createAccount();
         }
 
@@ -67,7 +65,7 @@ namespace Class
             account = 0;
             int id = getID();
             this.ID = id;
-            //IDs[IDs.Length] = id;
+            IDs[count] = id;
             Console.WriteLine($"Name: {Name}\nAge: {age}\nID: {ID}\nYour balance: {account}\n");
             count++;
         }

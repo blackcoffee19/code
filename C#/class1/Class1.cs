@@ -18,12 +18,17 @@ namespace Class
                 }else{
                     Console.Write("Enter your ID (if you dont have any ID type 1): ");
                     string? inputID = Console.ReadLine();
-                    while(inputID == null || inputID.Length < 6 && inputID != "1") {
+                    while(inputID == null) {
                         Console.Write("Enter your ID (if you dont have any ID type 1): ");
                         inputID = Console.ReadLine();
                     };
                     int converID = Int32.Parse(inputID);
+                    if (converID == 1) {
                     Bank acc = new Bank(inputName, converID);
+                    acc.createAccount();
+                    } else {
+                    Bank acc = new Bank(inputName, converID);
+                    };
                 }
             };
             int totalAcc = Bank.TotalAcc;

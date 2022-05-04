@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/blackcoffee/code/C#/C#.csproj",
-      "projectName": "C#",
-      "projectPath": "/home/blackcoffee/code/C#/C#.csproj",
+      "projectUniqueName": "/home/blackcoffee/code/OOP/Lab1/Lab1.csproj",
+      "projectName": "Lab1",
+      "projectPath": "/home/blackcoffee/code/OOP/Lab1/Lab1.csproj",
       "packagesPath": "/home/blackcoffee/.nuget/packages/",
-      "outputPath": "/home/blackcoffee/code/C#/obj/",
+      "outputPath": "/home/blackcoffee/code/OOP/Lab1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/blackcoffee/.nuget/NuGet/NuGet.Config"
