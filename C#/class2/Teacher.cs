@@ -8,5 +8,9 @@ namespace class2
             Duty = "Teacher";
             Id = School.GetID(Duty);
         }
+        public override void Greeting()
+        {
+            Console.WriteLine($"My name's {Name}. I'm {Duty}. Do you need anything?");
+        }
     }
 }

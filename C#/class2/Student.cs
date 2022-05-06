@@ -19,5 +19,15 @@ namespace class2
                 Level = 0;
             }
         }
+        public void Intro() {
+            Console.WriteLine($"I'm a student and my name is {Name}");
+        }
+        public override void Greeting()
+        {
+            Console.WriteLine($"My name's {Name}. I'm {Duty}.Can I help you?");
+        }
+        public void ReName(string newName){
+            Name = newName;
+        }
     }
 }

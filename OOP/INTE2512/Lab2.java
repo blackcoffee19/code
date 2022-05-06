@@ -51,9 +51,38 @@ public class Lab2 {
             System.out.print(str+ " ");
         };
         
+        Scanner input2 = new Scanner(System.in);
         System.out.println("\n3. ");
         System.out.print("Enter quote to reverse: ");
-        String str3 = input.nextLine();
-         
+        String str3 = input2.nextLine();
+        Palindrome(str3);
+        
+        System.out.println("\n4. ");
+        
+
+    }
+    public static void Palindrome(String str) {
+        char[] arr1 = new char[str.length()];
+        char[] arr2 = new char[str.length()];
+        str.getChars(0,str.length(),arr1,0);
+        StringBuilder strBuild = new StringBuilder("");
+        for(int i = 0; i < str.length(); i++) {
+            arr2[i] = arr1[str.length()-1-i];
+        };
+        System.out.println(strBuild.append(arr2));
+        arr1 = toLower(arr1);
+        arr2 = toLower(arr2);
+        System.out.println(arr1);
+        if(Arrays.equals(arr1, arr2)) {
+            System.out.println("Yes that's Palindrome");
+        } else{
+            System.out.println("No, that is not Palindrome");
+        }
+    }
+    public static char[] toLower(char[] arr) {
+        for (char c : arr) {
+            c = Character.toLowerCase(c);
+        } 
+        return arr;
     }
 }

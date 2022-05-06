@@ -6,7 +6,7 @@ namespace class2
         public string Id {get; protected set;}
         public int Age {get; private set;}
         public string Gender {get; private set;}
-        public string Name {get; private set;}
+        public string Name {get; protected set;}
         public string Duty {get; protected set;}
         public int Level {get; protected set;}
         public School(string name, int age, string gender, int level) {
@@ -17,6 +17,9 @@ namespace class2
         }
         public void Info(){
             Console.WriteLine($"{Duty}'s ID: {Id}\nName: {Name}\nGender: {Gender}\n");
+        }
+        public virtual void Greeting(){
+            Console.WriteLine($"My name's {Name}. I'm {Duty}.");
         }
         public virtual void increaseLevel (){
             this.Level++;
