@@ -1,7 +1,7 @@
 import java.util.*;
 public class Lab2 {
     public static void main(String[] args) {
-        System.out.println("1. ");
+        /*System.out.println("1. ");
         HashMap<String,Integer> hash1 = new HashMap<>();
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a year: ");
@@ -51,15 +51,38 @@ public class Lab2 {
             System.out.print(str+ " ");
         };
         
-        Scanner input2 = new Scanner(System.in);
-        System.out.println("\n3. ");
+        System.out.println("\n3 & 4. ");
         System.out.print("Enter quote to reverse: ");
         String str3 = input2.nextLine();
         Palindrome(str3);
-        
-        System.out.println("\n4. ");
-        
-
+        */
+        Scanner input2 = new Scanner(System.in);
+        System.out.println("\n5. ");
+        ArrayList<Integer> listNum = new ArrayList<Integer>();
+        System.out.print("Enter list: ");
+        String str4 = input2.nextLine();
+        int i = 0; 
+        int j = 1;
+        while(i < str4.length() && j < str4.length()){
+            char x = str4.charAt(j);
+            if(x == ' '){
+                String y = str4.substring(i,j);
+                int z = Integer.parseInt(y);
+                listNum.add(z);
+                i =j+1;
+                j += 2;
+            }else {
+                j++;
+                String y = str4.substring(i,j);
+                int z = Integer.parseInt(y);
+                listNum.add(z);
+                i = j+1;
+                j += 2; 
+            }
+        };
+        for(int w = 0; w < listNum.size();w++){
+            System.out.print(listNum.get(w)+ " ");
+        };
     }
     public static void Palindrome(String str) {
         char[] arr1 = new char[str.length()];
@@ -72,7 +95,6 @@ public class Lab2 {
         System.out.println(strBuild.append(arr2));
         arr1 = toLower(arr1);
         arr2 = toLower(arr2);
-        System.out.println(arr1);
         if(Arrays.equals(arr1, arr2)) {
             System.out.println("Yes that's Palindrome");
         } else{
@@ -80,8 +102,8 @@ public class Lab2 {
         }
     }
     public static char[] toLower(char[] arr) {
-        for (char c : arr) {
-            c = Character.toLowerCase(c);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Character.toLowerCase(arr[i]);
         } 
         return arr;
     }
