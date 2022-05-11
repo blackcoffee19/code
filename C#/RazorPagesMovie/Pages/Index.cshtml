@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{
+    List<string> hello = new List<string>(){
+        "Hello","std:cout >> \"Hello\"","System.out.println(\"Hello\")","Console.log(\"Hello\")","Console.WriteLine(\"Hello\")","printf(\"Hello\")"
+        };
+    Random ran = new Random();
+    int ra = ran.Next(0,hello.Count - 1);
+    string printHello = hello[ra];
+}
+<div class="text-center">
+    <h1 class="display-4">@printHello</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <ul>
+        @foreach(string he in hello){
+            <li>@he</li>;
+        }
+    </ul>
+</div>

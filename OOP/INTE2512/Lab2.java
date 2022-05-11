@@ -58,31 +58,51 @@ public class Lab2 {
         */
         Scanner input2 = new Scanner(System.in);
         System.out.println("\n5. ");
-        ArrayList<Integer> listNum = new ArrayList<Integer>();
         System.out.print("Enter list: ");
         String str4 = input2.nextLine();
-        int i = 0; 
-        int j = 1;
-        while(i < str4.length() && j < str4.length()){
-            char x = str4.charAt(j);
-            if(x == ' '){
-                String y = str4.substring(i,j);
-                int z = Integer.parseInt(y);
-                listNum.add(z);
-                i =j+1;
-                j += 2;
-            }else {
-                j++;
-                String y = str4.substring(i,j);
-                int z = Integer.parseInt(y);
-                listNum.add(z);
-                i = j+1;
-                j += 2; 
-            }
+        ArrayList<Integer> listNum = changeInputStr(str4);
+        
+        ArrayList<Integer> sorted = checkSort(listNum);
+        
+        if(listNum.equals(sorted)){
+            System.out.println("This list is already sorted");
+        }else {
+            System.out.println(sorted.toString());
+            System.out.println("This list is not sorted");
         };
-        for(int w = 0; w < listNum.size();w++){
-            System.out.print(listNum.get(w)+ " ");
+        /*System.out.println("\n5.");
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        for(int i = 0; i<100;i++) {
+            int x = (int) Math.round(Math.random()*9);
+            arr.add(x);
         };
+        int count2 = 0;
+        for (Integer i : arr) {
+            System.out.print(i);
+            count2++;
+            if(count2 == 6){
+                System.out.println();
+                count2 = 0;
+            };
+        };*/
+        System.out.println("\n6.");
+        System.out.print("Enter list: ");
+        String str5 = input2.nextLine();
+        ArrayList<Integer> listNum2 = changeInputStr(str5);
+        ArrayList<Integer> listDistin = new ArrayList<>();
+        int i = 0;
+        int j = listNum2.size()-1;
+        while(i < j){
+            int x = listNum2.get(i);
+            listDistin.add(x);
+            if(listDistin.contains(listNum2.get(j))){
+                listDistin.remove(i);
+                i++;
+            } else {
+                i++;
+            };
+        };
+        System.out.print(listDistin.toString());
     }
     public static void Palindrome(String str) {
         char[] arr1 = new char[str.length()];
@@ -107,4 +127,71 @@ public class Lab2 {
         } 
         return arr;
     }
+    public static ArrayList<Integer> changeInputStr(String str) {
+        int i = 0; 
+        int j = 1;
+        ArrayList<Integer> listNum = new ArrayList<Integer>();
+        while(i < str.length()){
+            //System.out.print(i + " "+ j +"\n");
+            if (i == str.length()-1){
+                String y = str.substring(i);
+                int z = Integer.parseInt(y);
+                listNum.add(z);
+                break;
+            };
+            char x = str.charAt(j);
+             if(x == ' '){
+                String y = str.substring(i,j);
+                //System.out.println("Condition1: "+ y);
+                int z = Integer.parseInt(y);
+                listNum.add(z);
+                i =j+1;
+                j += 2;
+            }else {
+                j++;
+                String y = str.substring(i,j);
+                //System.out.println("Condition2: "+ y+" new j = "+j);
+                int z = Integer.parseInt(y);
+                listNum.add(z);
+                i = j+1;
+                j += 2; 
+            }
+        };
+        return listNum;
+    }
+    public static ArrayList<Integer> checkSort(ArrayList<Integer> arr) {
+        int len = arr.size();
+        ArrayList<Integer> sorted = new ArrayList<Integer>();
+        //System.out.println(len);
+        int count = 0;
+        while(count < len){
+            int minA = arr.get(0);
+            //System.out.println(minA);
+            int ind = 1;
+            while (ind < arr.size()){
+                /*System.out.println(minA);
+                System.out.println(arr.get(ind));*/
+                if(minA > arr.get(ind)){
+                    minA = arr.get(ind);
+                    ind++;
+                } else {
+                    ind++;
+                }
+            }
+            //System.out.println();
+            sorted.add(minA);
+            int findIN = arr.indexOf(minA);
+           // System.out.println(findIN);
+            arr.remove(findIN);
+            count++;
+        };
+        return sorted;
+    }
+    /*private static int findMin(ArrayList<Integer> arr, int min, int j){
+        if(min < arr.get(j) || j < arr.size()){
+            return min;
+        } else {
+            return findMin(arr, arr.get(j), j++);
+        }
+    }*/
 }
