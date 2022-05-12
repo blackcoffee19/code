@@ -1,7 +1,7 @@
 import java.util.*;
 public class Lab2 {
     public static void main(String[] args) {
-        /*System.out.println("1. ");
+        System.out.println("1. ");
         HashMap<String,Integer> hash1 = new HashMap<>();
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a year: ");
@@ -52,11 +52,11 @@ public class Lab2 {
         };
         
         System.out.println("\n3 & 4. ");
+        Scanner input2 = new Scanner(System.in);
         System.out.print("Enter quote to reverse: ");
         String str3 = input2.nextLine();
         Palindrome(str3);
-        */
-        Scanner input2 = new Scanner(System.in);
+        
         System.out.println("\n5. ");
         System.out.print("Enter list: ");
         String str4 = input2.nextLine();
@@ -70,7 +70,7 @@ public class Lab2 {
             System.out.println(sorted.toString());
             System.out.println("This list is not sorted");
         };
-        /*System.out.println("\n5.");
+        System.out.println("\n5.");
         ArrayList<Integer> arr = new ArrayList<Integer>();
         for(int i = 0; i<100;i++) {
             int x = (int) Math.round(Math.random()*9);
@@ -84,25 +84,37 @@ public class Lab2 {
                 System.out.println();
                 count2 = 0;
             };
-        };*/
+        };
         System.out.println("\n6.");
         System.out.print("Enter list: ");
         String str5 = input2.nextLine();
         ArrayList<Integer> listNum2 = changeInputStr(str5);
         ArrayList<Integer> listDistin = new ArrayList<>();
-        int i = 0;
-        int j = listNum2.size()-1;
-        while(i < j){
-            int x = listNum2.get(i);
-            listDistin.add(x);
-            if(listDistin.contains(listNum2.get(j))){
-                listDistin.remove(i);
-                i++;
+        HashMap<Integer,Integer> obj = new HashMap<Integer,Integer>();
+        for(int i = 0; i < listNum2.size(); i++){
+            if(!listDistin.contains(listNum2.get(i))){
+                listDistin.add(listNum2.get(i));
+                obj.put(listNum2.get(i), 1);
             } else {
-                i++;
+                int val = obj.get(listNum2.get(i));
+                val++;
+                obj.replace(listNum2.get(i), val);
+                continue;
             };
         };
-        System.out.print(listDistin.toString());
+        ArrayList<Integer> x = new ArrayList<>();
+        for (Integer dis : obj.keySet()) {
+            if(obj.get(dis) == 1){
+                x.add(dis);
+                System.out.printf("%d occurs %d time\n",dis,obj.get(dis));
+            } else {
+                System.out.printf("%d occurs %d times\n",dis,obj.get(dis));
+            };
+        }
+        System.out.println("The distinct number of distinct number are "+x.toString());
+        System.out.print("\n"+listDistin.toString()+"\n");
+        input2.close();
+        input.close();
     }
     public static void Palindrome(String str) {
         char[] arr1 = new char[str.length()];
