@@ -16328,6 +16328,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/blackcoffee/code/C#/RazorPagesMovie/Pages/FormSide.cshtml",
+      "TargetPath": "Pages\\FormSide.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/blackcoffee/code/C#/RazorPagesMovie/Pages/Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
       "FileKind": "mvc"

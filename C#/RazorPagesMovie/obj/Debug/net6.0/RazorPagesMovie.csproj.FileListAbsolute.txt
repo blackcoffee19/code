@@ -24,3 +24,11 @@
 /home/blackcoffee/code/C#/RazorPagesMovie/obj/Debug/net6.0/RazorPagesMovie.pdb
 /home/blackcoffee/code/C#/RazorPagesMovie/obj/Debug/net6.0/RazorPagesMovie.genruntimeconfig.cache
 /home/blackcoffee/code/C#/RazorPagesMovie/obj/Debug/net6.0/ref/RazorPagesMovie.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/bin/Debug/net6.0/System.Web.Mvc.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/bin/Debug/net6.0/System.Web.Razor.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/bin/Debug/net6.0/System.Web.Helpers.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/bin/Debug/net6.0/System.Web.WebPages.Deployment.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/bin/Debug/net6.0/System.Web.WebPages.Razor.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/bin/Debug/net6.0/System.Web.WebPages.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/bin/Debug/net6.0/Microsoft.Web.Infrastructure.dll
+/home/blackcoffee/code/C#/RazorPagesMovie/obj/Debug/net6.0/RazorPagesMovie.csproj.CopyComplete

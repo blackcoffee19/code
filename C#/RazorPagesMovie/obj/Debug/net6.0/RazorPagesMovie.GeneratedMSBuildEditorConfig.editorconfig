@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/blackcoffee/code/C\#/RazorPagesMovie/Pages/FormSide.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybVNpZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/blackcoffee/code/C\#/RazorPagesMovie/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,8 +1,54 @@
 {
   "version": 2,
-  "dgSpecHash": "1wUogvRVoYSdUqwpjLMGOqXpg4pJiJEFzUejjKdphJ0ZxE2izd1WJpqWLROfkrj5pGI98QD8vFZgtPO+XZ7Dtg==",
+  "dgSpecHash": "rz+Rx2TCJd1Y21vCTVfXdvHNtwOfXDd7pj3sGkqZkzigpTzrn0UQP4agfUqDpsdlc8ce/p9htIY/72lmxjzCRQ==",
   "success": true,
   "projectFilePath": "/home/blackcoffee/code/C#/RazorPagesMovie/RazorPagesMovie.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "/home/blackcoffee/.nuget/packages/microsoft.aspnet.mvc/5.2.8/microsoft.aspnet.mvc.5.2.8.nupkg.sha512",
+    "/home/blackcoffee/.nuget/packages/microsoft.aspnet.razor/3.2.8/microsoft.aspnet.razor.3.2.8.nupkg.sha512",
+    "/home/blackcoffee/.nuget/packages/microsoft.aspnet.webpages/3.2.8/microsoft.aspnet.webpages.3.2.8.nupkg.sha512",
+    "/home/blackcoffee/.nuget/packages/microsoft.web.infrastructure/1.0.0/microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
