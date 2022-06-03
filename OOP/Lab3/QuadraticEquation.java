@@ -1,4 +1,3 @@
-package Lab3;
 import java.lang.*;
 
 public class QuadraticEquation {
@@ -17,6 +16,27 @@ public class QuadraticEquation {
     public double getDiscminant() {
         double x = (Math.pow(_b, 2) - (4*_a*_c));
         return x;
+    }
+    public double getRoot1(){
+        if(getDiscminant() < 0 ){
+            return 0;
+        };
+        double x1= Math.sqrt(Math.pow(_b, 2) -4*_a*_c);
+        double x2 = -_b + x1;
+        double x3 = x2/(2*_a);
+        return x3;
+    }
+    public double getRoot2(){
+        double x3;
+        if(getRoot1() == 0){
+            System.out.println("There equation has no roots.");
+            return 0;
+        } else {
+        double x1= Math.sqrt(Math.pow(_b, 2) -4*_a*_c);
+        double x2 = -_b - x1;
+        x3 = x2/(2*_a);
+        };
+        return x3;
     }
 }
 
