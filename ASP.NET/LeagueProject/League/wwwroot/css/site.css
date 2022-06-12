@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -15,4 +16,63 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+#jum {
+  width: 800px;
+  padding: 20px;
+  border-radius: 20px;
+  color: #fff;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#con-jum{
+  height: 30rem;
+  background-image: url("https://thumbs.dreamstime.com/b/bakery-seamless-background-baking-doodle-vector-pattern-pastry-sketches-hand-drawn-cakes-pies-wallpaper-bread-objects-157631532.jpg");
+}
+a.nav-link:hover a.nav-link:active{
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #a56d53!important;
+}
+.cus-nav-active{
+  background-color: #a56d53 !important;
+  color:#FFFFFF;
+  height: 100px;
+  padding:1.5rem 1rem;
+  border:1px solid #a56d53!important;
+  font-size:2em;
+  border-radius:1rem!important;
+}
+.cus-nav{
+  background-color:#d8aa88!important;
+  color:#FFFFFF;
+  height: 100px;
+  padding:1.5rem 1rem;
+  border:1px solid #a56d53!important;
+  font-size:2em;
+  border-radius:1rem!important;
+}
+.carousel-item > img {
+  width: auto;
+  margin: auto;
+  height: 100%;
+}
+.carousel-item{
+  height: 40rem;
+}
+#navs-bg{
+  margin-top: 20px;
+  background-image: url("https://thumbs.dreamstime.com/b/bakery-seamless-background-baking-doodle-vector-pattern-pastry-sketches-hand-drawn-cakes-pies-wallpaper-bread-objects-157631532.jpg");
+  opacity: 1;
+  border-radius: 1rem;
+  z-index: 2;
+}
+#navs-color{
+  background-color: #d8aa88;
+  opacity: 0.8;
+  z-index: 1;
 }

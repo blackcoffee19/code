@@ -1,10 +1,192 @@
-﻿@page
+﻿@page "{type?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center" id="con-jum">
+    <div class="container" id="jum">
+        <marquee><h1 class="display-4 font-weight-bold">League Bakery</h1></marquee>
+        <p class="lead">Best teaste for you</p>
+    </div>
 </div>
+@* <div class="container">
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item"><a asp-page="/Index" asp-route-type="Cake" class="nav-link cus-nav">Cake</a></li>
+        <li class="nav-item"><a asp-page="/Index" asp-route-type="Drink" class="nav-link cus-nav">Drink</a></li>
+        <li class="nav-item"><a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav">Fast Food</a></li>
+    </ul>
+</div> *@
+
+<div class="container" id="navs-bg">
+    <div id="navs-color">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                @if(Model.Type == "Cake"){
+                    <a asp-page="/Index" asp-route-type="Cake" class="nav-link cus-nav-active">Cake</a>
+                } else {
+                    <a asp-page="/Index" asp-route-type="Cake" class="nav-link cus-nav">Cake</a>
+                }
+            </li>
+            <li class="nav-item">
+                @if(Model.Type == "Drink"){
+                    <a asp-page="/Index" asp-route-type="Drink" class="nav-link cus-nav-active">Drink</a>
+                } else{
+                    <a asp-page="/Index" asp-route-type="Drink" class="nav-link cus-nav">Drink</a>
+                }
+            </li>
+            <li class="nav-item">
+                @if(Model.Type == "FF"){
+                    <a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav-active">Fast Food</a>
+                } else {
+                    <a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav">Fast Food</a>
+                }
+            </li>
+        </ul>
+    </div>
+</div>
+        <!--<label asp-for="Selec
+        tedSomething">Select</label>
+        <select asp-for="SelectedSomething" asp-items="Model.Something" onchange="this.form.submit();">
+            <option value="">All</option>
+        </select>-->
+        <!--<label asp-for="SearchString">Search</label>
+        <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />-->
+<div>
+    <form>
+        <label asp-for="SortField">Sort</label>
+        <select asp-for="SortField" onchange="this.form.submit();">
+            <option value="Name">Name</option>
+            <option value="Rating">Rating</option>
+            <option value="Prices">Prices</option>
+            <option value="Calories">Calories</option>
+        </select>
+    </form>
+</div>
+<div class="container" style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;">
+    @if(Model.Type == "Cake"){
+        @foreach(var cake in Model.Cakes)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src=@cake.ImgURL class="card-img-top rounded" alt="@cake.Name" style="height:252px;">
+                <div class="card-body">
+                    <h5 class="card-title">@cake.Name</h5>
+                    <p class="card-text">&#9733; @cake.Rating</p>
+                    <h6 class="card-text">$@cake.Prices</h6>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@cake.Modal">More information</button>
+                    <div class="modal fade" id="@cake.Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Information of @cake.Name</h4>
+                                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src=@cake.ImgURL class="card-img-top round" alt="@cake.Name" style="height:400px;width:auto;margin-left:20px;">
+                                    <h5 class="card-title">@cake.Name</h5>
+                                    <p calss="card-text">Ingredients: @cake.Ingredients</p>
+                                    <p class="card-text">Calories: @cake.Calories</p>
+                                    <p class="card-text">Rating: @cake.Rating</p>
+                                    <p class="card-text">Prices: @cake.Prices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }   
+    } else if(Model.Type == "Drink"){        
+        @foreach(var drink in Model.Drinks)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src=@drink.ImgURL class="card-img-top rounded" alt="@drink.Name" style="height:252px;">
+                <div class="card-body">
+                    <h5 class="card-title">@drink.Name</h5>
+                    <p class="card-text">&#9733; @drink.Rating</p>
+                    <h6 class="card-text">$@drink.Prices</h6>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@drink.Modal">More information</button>
+                    <div class="modal fade" id="@drink.Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Information of @drink.Name</h4>
+                                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src=@drink.ImgURL class="card-img-top round" alt="@drink.Name" style="height:400px;width:auto;margin-left:20px;">
+                                    <h5 class="card-title">@drink.Name</h5>
+                                    <p calss="card-text">Ingredients: @drink.Ingredients</p>
+                                    <p class="card-text">Calories: @drink.Calories</p>
+                                    <p class="card-text">Rating: @drink.Rating</p>
+                                    <p class="card-text">Prices: @drink.Prices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }else if (Model.Type == "FF"){
+        @foreach(var ff in Model.FastFoods)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src=@ff.ImgURL class="card-img-top rounded" alt="@ff.Name" style="height:252px;">
+                <div class="card-body">
+                    <h5 class="card-title">@ff.Name</h5>
+                    <p class="card-text">&#9733; @ff.Rating</p>
+                    <h6 class="card-text">$@ff.Prices</h6>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@ff.Modal">More information</button>
+                    <div class="modal fade" id="@ff.Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Information of @ff.Name</h4>
+                                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src=@ff.ImgURL class="card-img-top round" alt="@ff.Name" style="height:400px;width:auto;margin-left:20px;">
+                                    <h5 class="card-title">@ff.Name</h5>
+                                    <p calss="card-text">Ingredients: @ff.Ingredients</p>
+                                    <p class="card-text">Calories: @ff.Calories</p>
+                                    <p class="card-text">Rating: @ff.Rating</p>
+                                    <p class="card-text">Prices: @ff.Prices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@* <div class="container" style="display:flex; flex-direction: row;margin-top:20px;">
+
+        <div class="card" style="width: 18rem;">
+            <img src=@Model.Cakes[1].ImgURL class="card-img-top rounded" alt="@Model.Cakes[1].Name" style="height:252px;">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Cakes[1].Name</h5>
+                <p class="card-text">@Model.Cakes[1].Rating</p>
+                <h6 class="card-text">$@Model.Cakes[1].Prices</h6>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@Model.Cakes[1].Modal">More information</button>
+                <div class="modal fade" id="@Model.Cakes[1].Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Information of @Model.Cakes[1].Name</h4>
+                                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src=@Model.Cakes[1].ImgURL class="card-img-top" alt="@Model.Cakes[1].Name">
+                                <h5 class="card-title">@Model.Cakes[1].Name</h5>
+                                <p calss="card-text">Ingredients: @Model.Cakes[1].Ingredients</p>
+                                <p class="card-text">Calories: @Model.Cakes[1].Calories</p>
+                                <p class="card-text">Rating: @Model.Cakes[1].Rating</p>
+                                <p class="card-text">Prices: @Model.Cakes[1].Prices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+</div>  *@
