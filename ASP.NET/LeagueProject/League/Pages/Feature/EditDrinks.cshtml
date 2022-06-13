@@ -1,0 +1,56 @@
+@page
+@model EditDrinksModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container" id="formside">
+    <form method="post">
+        <div class="row mb-3">
+            <label asp-for=@Model.EditDrinks.ID class="col-sm-2 col-form-label">ID:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for=@Model.EditDrinks.ID placeholder="ID">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label asp-for=@Model.EditDrinks.Name class="col-sm-2 col-form-label">Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for=@Model.EditDrinks.Name placeholder="Enter name of drink">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label asp-for=@Model.EditDrinks.Ingredients class="col-sm-2 col-form-label">Recipes:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for=@Model.EditDrinks.Ingredients placeholder="Enter Recipes">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label asp-for=@Model.EditDrinks.Calories class="col-sm-2 col-form-label">Calories:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" asp-for=@Model.EditDrinks.Calories placeholder="Enter Calories">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label asp-for=@Model.EditDrinks.Rating class="col-sm-2 col-form-label">Rating:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" asp-for=@Model.EditDrinks.Rating placeholder="Enter Rating">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label asp-for=@Model.EditDrinks.Prices class="col-sm-2 col-form-label">Prices:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" asp-for=@Model.EditDrinks.Prices placeholder="Enter Prices">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label asp-for=@Model.EditDrinks.ImgURL class="col-sm-2 col-form-label">Image:</label>
+            <div class="col-sm-10">
+                <input type="url" class="form-control" asp-for=@Model.EditDrinks.ImgURL placeholder="Link Image">
+            </div>
+        </div>
+        @* <div class="mb-3">
+            <label asp-for=@Model.EditDrinks.ImgURL class="form-label">Image:</label>
+            <input type="url" class="form-control" asp-for=@Model.EditDrinks.ImgURL placeholder="Link Image">
+        </div> *@
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

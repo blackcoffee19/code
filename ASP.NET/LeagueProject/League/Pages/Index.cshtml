@@ -16,33 +16,31 @@
         <li class="nav-item"><a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav">Fast Food</a></li>
     </ul>
 </div> *@
-
-<div class="container" id="navs-bg">
-    <div id="navs-color">
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-                @if(Model.Type == "Cake"){
-                    <a asp-page="/Index" asp-route-type="Cake" class="nav-link cus-nav-active">Cake</a>
-                } else {
-                    <a asp-page="/Index" asp-route-type="Cake" class="nav-link cus-nav">Cake</a>
-                }
-            </li>
-            <li class="nav-item">
-                @if(Model.Type == "Drink"){
-                    <a asp-page="/Index" asp-route-type="Drink" class="nav-link cus-nav-active">Drink</a>
-                } else{
-                    <a asp-page="/Index" asp-route-type="Drink" class="nav-link cus-nav">Drink</a>
-                }
-            </li>
-            <li class="nav-item">
-                @if(Model.Type == "FF"){
-                    <a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav-active">Fast Food</a>
-                } else {
-                    <a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav">Fast Food</a>
-                }
-            </li>
-        </ul>
-    </div>
+<hr style="color:#a56d53; margin:5px 0; width:100%;">
+<div class="container">
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            @if(Model.Type == "Cake"){
+                <a asp-page="/Index" asp-route-type="Cake" class="nav-link cus-nav-active">Cake</a>
+            } else {
+                <a asp-page="/Index" asp-route-type="Cake" class="nav-link cus-nav">Cake</a>
+            }
+        </li>
+        <li class="nav-item">
+            @if(Model.Type == "Drink"){
+                <a asp-page="/Index" asp-route-type="Drink" class="nav-link cus-nav-active">Drink</a>
+            } else{
+                <a asp-page="/Index" asp-route-type="Drink" class="nav-link cus-nav">Drink</a>
+            }
+        </li>
+        <li class="nav-item">
+            @if(Model.Type == "FF"){
+                <a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav-active">Fast Food</a>
+            } else {
+                <a asp-page="/Index" asp-route-type="FF" class="nav-link cus-nav">Fast Food</a>
+            }
+        </li>
+    </ul>
 </div>
         <!--<label asp-for="Selec
         tedSomething">Select</label>
@@ -79,6 +77,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @cake.Name</h4>
+                                    <a class="btn btn-sm btn-success" asp-page="/Feature/EditCakes" asp-route-id=@cake.ID>Edit</a>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
@@ -110,6 +109,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @drink.Name</h4>
+                                    <a class="btn btn-sm btn-success" asp-page="/Feature/EditDrinks" asp-route-id=@drink.ID>Edit</a>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
@@ -141,6 +141,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @ff.Name</h4>
+                                    <a class="btn btn-sm btn-success" asp-page="/Feature/EditFF" asp-route-id=@ff.ID>Edit</a>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">

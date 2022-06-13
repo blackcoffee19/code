@@ -35,8 +35,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9Db250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9FZGl0LmNzaHRtbA==
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/EditCakes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9FZGl0Q2FrZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/EditDrinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9FZGl0RHJpbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/EditFF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9FZGl0RkYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Index.cshtml]
