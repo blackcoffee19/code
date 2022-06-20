@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FrZVBhZ2UvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/CartPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FydFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/DrinkPage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRHJpbmtQYWdlL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,6 +41,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/CreateCake.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9DcmVhdGVDYWtlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/CreateDrink.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9DcmVhdGVEcmluay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/CreateFF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmVhdHVyZS9DcmVhdGVGRi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/blackcoffee/code/ASP.NET/LeagueProject/League/Pages/Feature/EditCakes.cshtml]

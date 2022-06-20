@@ -1,13 +1,27 @@
-﻿@page "{type?}"
+﻿@page "{Type?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
+
 <div class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center" id="con-jum">
     <div class="container" id="jum">
         <marquee><h1 class="display-4 font-weight-bold">League Bakery</h1></marquee>
         <p class="lead">Best teaste for you</p>
+        <div class="container">
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Create
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" asp-page="/Feature/CreateCake">Cake</a>
+                  <a class="dropdown-item" asp-page="/Feature/CreateDrink" asp-route-type="drink">Drink</a>
+                  <a class="dropdown-item" asp-page="/Feature/CreateFF" asp-route-type="ff">Fast Food</a>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
 @* <div class="container">
     <ul class="nav nav-pills nav-fill">
@@ -78,6 +92,10 @@
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @cake.Name</h4>
                                     <a class="btn btn-sm btn-success" asp-page="/Feature/EditCakes" asp-route-id=@cake.ID>Edit</a>
+                                    <form method="post">
+                                        <input type="hidden" asp-for="@cake.ID" >
+                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger">
+                                    </form>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
@@ -110,6 +128,10 @@
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @drink.Name</h4>
                                     <a class="btn btn-sm btn-success" asp-page="/Feature/EditDrinks" asp-route-id=@drink.ID>Edit</a>
+                                    <form method="post">
+                                        <input type="hidden" asp-for="@drink.ID">
+                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger">
+                                    </form>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
@@ -142,6 +164,10 @@
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @ff.Name</h4>
                                     <a class="btn btn-sm btn-success" asp-page="/Feature/EditFF" asp-route-id=@ff.ID>Edit</a>
+                                    <form method="post">
+                                        <input type="hidden" asp-for="@ff.ID">
+                                        <input type="submit" value="Add" class="btn btn-sm btn-success">
+                                    </form>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">

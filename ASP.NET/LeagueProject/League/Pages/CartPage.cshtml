@@ -1,0 +1,10 @@
+@page
+@model CartModel
+@* @if(Model.food != null){
+    <div class="container">
+        <center><img src=@Model.food.ImgURL alt="Food"></center>
+        <h1>@Model.food.Name</h1>
+        <p>@Model.food.Price</p>
+    </div>
+} else { *@
+    <p>Nothing @Model.error</p>

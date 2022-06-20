@@ -18,22 +18,41 @@ namespace League.Pages.Feature
             _context = context;
         }
         [BindProperty]
-        public Cake NewCake {get;set;}
-        public IList<Cake> ListCake {get;set;}
-        public SelectList SelectLists {get;set;}
+        public Cake? NewCake {get;set;} = default!;
+        [BindProperty]
+        public Drink? NewDrink {get;set;} = default!;
+        [BindProperty]
+        public FastFood? NewFF {get;set;} = default!;
         public string modal {get;set;}
-        public IActionResult OnGetAsync(){
+        public string Type {get;set;}
+        public string ExceptionE {get;set;}
+        public IActionResult OnGetAsync(string type = "cake"){
+            if(String.IsNullOrEmpty(type)){
+                return NotFound();
+            }
+            Type = type;
             return Page();
         }
         public async Task<IActionResult> OnPostAsync(){
-            if(!ModelState.IsValid || _context.Cakes == null || NewCake == null){
-                return Page();
+            try {
+                if(Type == "cake"){
+                    NewCake.ID = _context.Cakes.Count()+1;
+                    NewCake.Modal = NewCake.Name.Replace(" ",String.Empty);
+                    _context.Cakes.Add(NewCake);
+                } else if(Type == "drink"){
+                    NewDrink.ID = _context.Drinks.Count()+1;
+                    NewDrink.Modal = NewDrink.Name.Replace(" ",String.Empty);
+                    _context.Drinks.Add(NewDrink);
+                } else {
+                    NewFF.ID = _context.Drinks.Count()+1;
+                    NewFF.Modal = NewFF.Name.Replace(" ", String.Empty);
+                    _context.FastFoods.Add(NewFF);
+                };
+                await _context.SaveChangesAsync();
+            } catch (Exception e) {
+                ExceptionE = e.ToString();
             }
-               
-            NewCake.Modal = NewCake.Name.Replace(" ",String.Empty);
-            _context.Cakes.Add(NewCake);
-            await _context.SaveChangesAsync();
-            return RedirectToPage("/Index");
+            return Page();
         }
     }
 }

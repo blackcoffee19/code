@@ -12,7 +12,8 @@ namespace League.Migrations
                 name: "Cake",
                 columns: table => new
                 {
-                    ID = table.Column<string>(type: "TEXT", nullable: false),
+                    ID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Ingredients = table.Column<string>(type: "TEXT", nullable: true),
                     Calories = table.Column<int>(type: "INTEGER", nullable: false),
@@ -30,7 +31,8 @@ namespace League.Migrations
                 name: "Drink",
                 columns: table => new
                 {
-                    ID = table.Column<string>(type: "TEXT", nullable: false),
+                    ID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Ingredients = table.Column<string>(type: "TEXT", nullable: true),
                     Calories = table.Column<int>(type: "INTEGER", nullable: false),
@@ -48,7 +50,8 @@ namespace League.Migrations
                 name: "FastFood",
                 columns: table => new
                 {
-                    ID = table.Column<string>(type: "TEXT", nullable: false),
+                    ID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Ingredients = table.Column<string>(type: "TEXT", nullable: true),
                     Calories = table.Column<int>(type: "INTEGER", nullable: false),

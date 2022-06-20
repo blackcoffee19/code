@@ -18,8 +18,9 @@ namespace League.Migrations
 
             modelBuilder.Entity("League.Models.Cake", b =>
                 {
-                    b.Property<string>("ID")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Calories")
                         .HasColumnType("INTEGER");
@@ -50,8 +51,9 @@ namespace League.Migrations
 
             modelBuilder.Entity("League.Models.Drink", b =>
                 {
-                    b.Property<string>("ID")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Calories")
                         .HasColumnType("INTEGER");
@@ -82,8 +84,9 @@ namespace League.Migrations
 
             modelBuilder.Entity("League.Models.FastFood", b =>
                 {
-                    b.Property<string>("ID")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Calories")
                         .HasColumnType("INTEGER");

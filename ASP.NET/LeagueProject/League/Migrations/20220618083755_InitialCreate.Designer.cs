@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace League.Migrations
 {
     [DbContext(typeof(LeagueContext))]
-    [Migration("20220612150058_InitialCreate")]
+    [Migration("20220618083755_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,8 +20,9 @@ namespace League.Migrations
 
             modelBuilder.Entity("League.Models.Cake", b =>
                 {
-                    b.Property<string>("ID")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Calories")
                         .HasColumnType("INTEGER");
@@ -52,8 +53,9 @@ namespace League.Migrations
 
             modelBuilder.Entity("League.Models.Drink", b =>
                 {
-                    b.Property<string>("ID")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Calories")
                         .HasColumnType("INTEGER");
@@ -84,8 +86,9 @@ namespace League.Migrations
 
             modelBuilder.Entity("League.Models.FastFood", b =>
                 {
-                    b.Property<string>("ID")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Calories")
                         .HasColumnType("INTEGER");

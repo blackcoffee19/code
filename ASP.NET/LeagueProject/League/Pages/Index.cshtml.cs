@@ -8,7 +8,8 @@ using League.Data;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 using System;
-
+using System.IO;
+using System.Xml.Serialization;
 namespace League.Pages
 {
     public class IndexModel : PageModel
@@ -23,8 +24,11 @@ namespace League.Pages
         public List<Cake> Cakes {get;set;}
         public List<Drink> Drinks {get;set;}
         public List<FastFood> FastFoods {get;set;}
+        public Food food {get;set;}
+        public String error {get;set;}
         public async Task<IActionResult> OnGetAsync(string type = "Cake")
         {
+            
             if(String.IsNullOrEmpty(type)){
                 return NotFound();
             };
@@ -106,20 +110,46 @@ namespace League.Pages
             };
             return Page();
         }
-        public async Task<IActionResult> OnPostAsync(int id){
+        public async Task<IActionResult> OnPostAsync(int? id){
             if(id == null)
             {
                 return NotFound();
             }
-            Cake Cake = await _context.Cakes.FindAsync(id);
-            if(Cake != null){
-                _context.Cakes.Remove(Cake);
-            }
+                // if(this.Type == "Cake"){
+                //     Cake Cake = await _context.Cakes.FindAsync(id);
+                //     food = new Food("Cake",Cake.Name,Cake.ImgURL,Cake.Prices);
+                //     Food.Save(food);
+                // } else if(this.Type == "Drink"){
+                //     Drink Drink = await _context.Drinks.FindAsync(id);
+                //     food =new Food("Drink", Drink.Name,Drink.ImgURL,Drink.Prices);
+                //     Food.Save(food);
+                // } else if(this.Type == "FF"){
+                //     FastFood FastFood = await _context.FastFoods.FindAsync(id);
+                //     food = new Food("Fast Food", FastFood.Name, FastFood.ImgURL,FastFood.Prices);
+                //     Food.Save(food);
+                // };
+                if(_context.Cakes != null && this.Type == "Cake"){
+                    Cake Cake = await _context.Cakes.FindAsync(id);
+                    _context.Cakes.Remove(Cake);
+                } else if(_context.Drinks != null && this.Type == "Drink"){
+                    Drink Drink = await _context.Drinks.FindAsync(id);
+                    _context.Drinks.Remove(Drink);
+                } else if(_context.FastFoods != null && this.Type == "FF"){
+                    FastFood FastFood = await _context.FastFoods.FindAsync(id);
+                    _context.FastFoods.Remove(FastFood);
+                };
+            // if(Cake != null){
+                
+            // } else if (Drink != null) {
+            //     //_context.Foods.Add(Drink);
+            // } else if(FastFood != null){
+            //     //_context.Foods.Add(FastFood);
+            // };
             await _context.SaveChangesAsync();
-            return RedirectToPage("./Index");
+            return Page();
         }
         [BindProperty(SupportsGet =true)]
         public string SortField {get; set;} = "Name";
-
+       
     }
 }

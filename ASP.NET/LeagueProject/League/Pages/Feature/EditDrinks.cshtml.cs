@@ -22,7 +22,7 @@ namespace League.Pages.Feature
         public IList<Drink> ListDrinks {get;set;}
         public SelectList SelectLists {get;set;}
         public string modal {get;set;}
-        public async Task<IActionResult> OnGetAsync(string id){
+        public async Task<IActionResult> OnGetAsync(int id){
             if(id == null ||_context.Drinks == null ){
                 return NotFound();
             };
