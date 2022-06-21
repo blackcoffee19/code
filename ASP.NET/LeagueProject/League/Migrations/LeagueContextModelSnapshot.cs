@@ -114,6 +114,56 @@ namespace League.Migrations
 
                     b.ToTable("FastFood", (string)null);
                 });
+
+            modelBuilder.Entity("League.Models.Food", b =>
+                {
+                    b.Property<double>("Price")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("cakeID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("drinkID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("fastFoodID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasIndex("cakeID");
+
+                    b.HasIndex("drinkID");
+
+                    b.HasIndex("fastFoodID");
+
+                    b.ToTable("Food", (string)null);
+                });
+
+            modelBuilder.Entity("League.Models.Food", b =>
+                {
+                    b.HasOne("League.Models.Cake", "cake")
+                        .WithMany()
+                        .HasForeignKey("cakeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("League.Models.Drink", "drink")
+                        .WithMany()
+                        .HasForeignKey("drinkID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("League.Models.FastFood", "fastFood")
+                        .WithMany()
+                        .HasForeignKey("fastFoodID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("cake");
+
+                    b.Navigation("drink");
+
+                    b.Navigation("fastFood");
+                });
 #pragma warning restore 612, 618
         }
     }

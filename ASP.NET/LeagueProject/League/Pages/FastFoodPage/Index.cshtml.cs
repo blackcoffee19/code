@@ -19,10 +19,23 @@ namespace League.Pages.FastFoodPage
             _context = context;
         }
         public List<FastFood> FastFoods {get;set;}
+        public FastFood fastFood {get;set;}
         public async Task OnGetAsync(){
             var ff = from c in _context.FastFoods
                 select c;
             FastFoods = await ff.ToListAsync();
+        }
+        public async Task<IActionResult> OnPostAsync(string id){
+            if(id == null){
+                return NotFound();
+            }
+            int idn = Int32.Parse(id);
+            FastFood fastFood = await _context.FastFoods.FindAsync(idn);
+            if(fastFood != null){
+                _context.FastFoods.Remove(fastFood);
+            };
+            await _context.SaveChangesAsync();
+            return RedirectToPage("/FastFoodPage/Index");
         }
     }
 }

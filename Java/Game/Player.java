@@ -11,7 +11,7 @@ public class Player implements Serializable {
         this._coin = 0;
     }
     public String toString(){
-        return "\nPlayer: "+this._name+"\nDamage: "+this._dmg+"\nHeath: "+this._hp+"\nPlayer's coin: "+this._coin+"\n";
+        return "\nPlayer: "+this._name+"\nHeath: "+this._hp+"\nDamage: "+this._dmg+"\nPlayer's coin: "+this._coin+"\n";
     }
     public int getPlayerHp(){
         return this._hp;

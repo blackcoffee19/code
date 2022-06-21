@@ -1,10 +1,77 @@
 @page
 @model CartModel
-@* @if(Model.food != null){
-    <div class="container">
-        <center><img src=@Model.food.ImgURL alt="Food"></center>
-        <h1>@Model.food.Name</h1>
-        <p>@Model.food.Price</p>
+@{
+    ViewData["Title"] = "Cart page";
+}
+<div class="container" style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;">
+    @foreach(var cake in Model.Cakes)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src=@cake.ImgURL class="card-img-top rounded" alt="@cake.Name" style="height:252px;">
+            <div class="card-body">
+                <h5 class="card-title">@cake.Name</h5>
+                <p class="card-text">&#9733; @cake.Rating</p>
+                <h6 class="card-text">$@cake.Prices</h6>
+                <p class="card-text">@cake.Ingredients</p>
+                <form method="post">
+                    <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
+                    <input type="hidden" value="@cake.ID" name="ID" />
+                </form>
+            </div>
+        </div>
+    }
+    @foreach(var drink in Model.Drinks)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src=@drink.ImgURL class="card-img-top rounded" alt="@drink.Name" style="height:252px;">
+            <div class="card-body">
+                <h5 class="card-title">@drink.Name</h5>
+                <p class="card-text">&#9733; @drink.Rating</p>
+                <h6 class="card-text">$@drink.Prices</h6>
+                <p class="card-text">@drink.Ingredients</p>
+                <form method="post">
+                    <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
+                    <input type="hidden" value="@drink.ID" name="ID" />
+                </form>
+            </div>
+        </div>
+    }
+    @foreach(var ff in Model.FastFoods)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src=@ff.ImgURL class="card-img-top rounded" alt="@ff.Name" style="height:252px;">
+            <div class="card-body">
+                <h5 class="card-title">@ff.Name</h5>
+                <p class="card-text">&#9733; @ff.Rating</p>
+                <h6 class="card-text">$@ff.Prices</h6>
+                <p class="card-text">@ff.Ingredients</p>
+                <form method="post">
+                    <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
+                    <input type="hidden" value="@ff.ID" name="ID" />
+                </form>
+                            
+            </div>
+        </div>
+    }
+</div>
+<div class="container">
+    <div>
+        @foreach(var cake in Model.CartCake){
+            <h3>@cake.Name</h3>
+            <h4>@cake.Prices</h4>
+        }
     </div>
-} else { *@
-    <p>Nothing @Model.error</p>
+    <div>
+        @foreach(var drink in Model.CartDrink){
+            <h3>@drink.Name</h3>
+            <h4>@drink.Prices</h4>
+        }
+    </div>
+    <div>
+        @foreach(var ff in Model.CartFF){
+            <h3>@ff.Name</h3>
+            <h4>@ff.Prices</h4>
+        }
+    </div>
+</div>
+        

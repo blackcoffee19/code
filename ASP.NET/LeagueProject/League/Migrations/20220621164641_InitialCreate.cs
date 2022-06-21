@@ -64,10 +64,59 @@ namespace League.Migrations
                 {
                     table.PrimaryKey("PK_FastFood", x => x.ID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Food",
+                columns: table => new
+                {
+                    cakeID = table.Column<int>(type: "INTEGER", nullable: false),
+                    drinkID = table.Column<int>(type: "INTEGER", nullable: false),
+                    fastFoodID = table.Column<int>(type: "INTEGER", nullable: false),
+                    Price = table.Column<double>(type: "REAL", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.ForeignKey(
+                        name: "FK_Food_Cake_cakeID",
+                        column: x => x.cakeID,
+                        principalTable: "Cake",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Food_Drink_drinkID",
+                        column: x => x.drinkID,
+                        principalTable: "Drink",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Food_FastFood_fastFoodID",
+                        column: x => x.fastFoodID,
+                        principalTable: "FastFood",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Food_cakeID",
+                table: "Food",
+                column: "cakeID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Food_drinkID",
+                table: "Food",
+                column: "drinkID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Food_fastFoodID",
+                table: "Food",
+                column: "fastFoodID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Food");
+
             migrationBuilder.DropTable(
                 name: "Cake");
 

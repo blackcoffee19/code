@@ -65,6 +65,11 @@
                                 <p class="card-text">Calories: @drink.Calories</p>
                                 <p class="card-text">Rating: @drink.Rating</p>
                                 <p class="card-text">Prices: @drink.Prices</p>
+                                <form method="post">
+                                        <a class="btn btn-sm btn-success" asp-page="/Feature/EditDrinks" asp-route-id=@drink.ID>Edit</a>
+                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger"/>
+                                        <input type="hidden" value="@drink.ID" name="ID" />
+                                </form>
                             </div>
                         </div>
                     </div>

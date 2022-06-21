@@ -56,6 +56,8 @@
         </li>
     </ul>
 </div>
+<hr style="color:#a56d53; margin:5px 0; width:100%;">
+
         <!--<label asp-for="Selec
         tedSomething">Select</label>
         <select asp-for="SelectedSomething" asp-items="Model.Something" onchange="this.form.submit();">
@@ -91,11 +93,6 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @cake.Name</h4>
-                                    <a class="btn btn-sm btn-success" asp-page="/Feature/EditCakes" asp-route-id=@cake.ID>Edit</a>
-                                    <form method="post">
-                                        <input type="hidden" asp-for="@cake.ID" >
-                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger">
-                                    </form>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
@@ -105,6 +102,11 @@
                                     <p class="card-text">Calories: @cake.Calories</p>
                                     <p class="card-text">Rating: @cake.Rating</p>
                                     <p class="card-text">Prices: @cake.Prices</p>
+                                    <form method="post">
+                                        <a class="btn btn-sm btn-success" asp-page="/Feature/EditCakes" asp-route-id=@cake.ID>Edit</a>
+                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger"/>
+                                        <input type="hidden" value="@cake.ID" name="ID" />
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -127,11 +129,6 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @drink.Name</h4>
-                                    <a class="btn btn-sm btn-success" asp-page="/Feature/EditDrinks" asp-route-id=@drink.ID>Edit</a>
-                                    <form method="post">
-                                        <input type="hidden" asp-for="@drink.ID">
-                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger">
-                                    </form>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
@@ -141,6 +138,11 @@
                                     <p class="card-text">Calories: @drink.Calories</p>
                                     <p class="card-text">Rating: @drink.Rating</p>
                                     <p class="card-text">Prices: @drink.Prices</p>
+                                    <form method="post">
+                                        <a class="btn btn-sm btn-success" asp-page="/Feature/EditDrinks" asp-route-id=@drink.ID>Edit</a>
+                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger"/>
+                                        <input type="hidden" value="@drink.ID" name="ID" />
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -163,11 +165,6 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 class="modal-title">Information of @ff.Name</h4>
-                                    <a class="btn btn-sm btn-success" asp-page="/Feature/EditFF" asp-route-id=@ff.ID>Edit</a>
-                                    <form method="post">
-                                        <input type="hidden" asp-for="@ff.ID">
-                                        <input type="submit" value="Add" class="btn btn-sm btn-success">
-                                    </form>
                                     <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
@@ -177,6 +174,11 @@
                                     <p class="card-text">Calories: @ff.Calories</p>
                                     <p class="card-text">Rating: @ff.Rating</p>
                                     <p class="card-text">Prices: @ff.Prices</p>
+                                    <form method="post">
+                                        <a class="btn btn-sm btn-success" asp-page="/Feature/EditFF" asp-route-id=@ff.ID>Edit</a>
+                                        <input type="submit" value="Delete" class="btn btn-sm btn-danger" />
+                                        <input type="hidden" value="@ff.ID" name="ID" />
+                                    </form>
                                 </div>
                             </div>
                         </div>

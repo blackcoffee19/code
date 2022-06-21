@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace League.Migrations
 {
     [DbContext(typeof(LeagueContext))]
-    [Migration("20220618083755_InitialCreate")]
+    [Migration("20220621164641_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -115,6 +115,56 @@ namespace League.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("FastFood", (string)null);
+                });
+
+            modelBuilder.Entity("League.Models.Food", b =>
+                {
+                    b.Property<double>("Price")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("cakeID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("drinkID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("fastFoodID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasIndex("cakeID");
+
+                    b.HasIndex("drinkID");
+
+                    b.HasIndex("fastFoodID");
+
+                    b.ToTable("Food", (string)null);
+                });
+
+            modelBuilder.Entity("League.Models.Food", b =>
+                {
+                    b.HasOne("League.Models.Cake", "cake")
+                        .WithMany()
+                        .HasForeignKey("cakeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("League.Models.Drink", "drink")
+                        .WithMany()
+                        .HasForeignKey("drinkID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("League.Models.FastFood", "fastFood")
+                        .WithMany()
+                        .HasForeignKey("fastFoodID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("cake");
+
+                    b.Navigation("drink");
+
+                    b.Navigation("fastFood");
                 });
 #pragma warning restore 612, 618
         }

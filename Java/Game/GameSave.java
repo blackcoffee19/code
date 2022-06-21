@@ -25,15 +25,19 @@ public class GameSave implements Serializable{
         Random rand = new Random();
         int enemyCreate = rand.nextInt(5)+1;
         for(int i = 0; i < enemyCreate; i++){
+            if(player.getPlayerHp() <= 0){
+                break;
+            };
             Enemy enemy = new Enemy();
             while(enemy.getHp() > 0){
                 enemy.enemyLossHp(player.getPlayerDmg());
                 player.LossHp(enemy.getDmg());
             }
-            System.out.println("/nDefeat 1 enemy");
+            System.out.println("\nDefeat 1 enemy");
             System.out.println("You get: "+enemy.getDropCoin()+"coins \n");
             player.GetCoin(enemy.getDropCoin());
-            Adventure.addDelay(2000);
-        }
+            Adventure.addDelay(1000);
+        };
+        System.out.println("Defeat total: "+ enemyCreate+"\n");
     }
 }
