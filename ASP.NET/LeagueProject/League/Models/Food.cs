@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Xml.Serialization;
+using System.Xml.Linq;
 
 namespace League.Models
 {
@@ -39,9 +40,17 @@ namespace League.Models
             return this.FastFoods;
         }
         public static void Save(Food food, String typefood) {
-            using(var stream = File.OpenWrite(typefood+".xml")){
-                XmlSerializer serializer = new XmlSerializer(typeof(Food));
-                serializer.Serialize(stream, food);
+            if(File.Exists(typefood+".xml")){
+                XDocument doc = XDocument.Load(typefood+".xml");
+                XNamespace ns = doc.Root.GetDefaultNamespace();
+                XElement files = doc.Descendants(ns+"Files").FirstOrDefault();
+                XElement newFile = new XElement(ns+"Files", food);
+                files.Add(newFile);
+            } else {
+                using(var stream = File.OpenWrite(typefood+".xml")){
+                    XmlSerializer serializer = new XmlSerializer(typeof(Food));
+                    serializer.Serialize(stream, food);
+                }
             }
         }
         public static Food Load(String typefood){

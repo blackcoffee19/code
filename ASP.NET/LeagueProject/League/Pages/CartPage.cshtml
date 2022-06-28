@@ -4,6 +4,7 @@
     ViewData["Title"] = "Cart page";
 }
 <div class="container" style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;">
+    <div style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;">
     @foreach(var cake in Model.Cakes)
     {
         <div class="card" style="width: 18rem;">
@@ -53,25 +54,10 @@
             </div>
         </div>
     }
-</div>
-<div class="container">
-    <div>
-        @foreach(var cake in Model.CartCake){
-            <h3>@cake.Name</h3>
-            <h4>@cake.Prices</h4>
-        }
     </div>
-    <div>
-        @foreach(var drink in Model.CartDrink){
-            <h3>@drink.Name</h3>
-            <h4>@drink.Prices</h4>
-        }
-    </div>
-    <div>
-        @foreach(var ff in Model.CartFF){
-            <h3>@ff.Name</h3>
-            <h4>@ff.Prices</h4>
-        }
+    <div id="cart">
+        
     </div>
 </div>
+<hr style="color:#a56d53; margin:5px 0; width:100%;">
         

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anek+Latin&family=Open+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+        <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+        <script defer src="https://kit.fontawesome.com/e918d10e90.js" crossorigin="anonymous"></script>
+        <script defer src="script/movie-help.js"></script>
+        <script defer src="script/movie-main.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <div><h2>Movie</h2></div>
+            </div>
+            <h2>Random</h2>
+        </header>
+        <main>
+            <h1>Choose a genre:</h1>
+            <form id="form" autocomplete="off">
+                <select name="genres" id="genres"></select>
+            </form>
+            <button id="playBtn">Take Random!</button>
+            <div id="responseField">
+                <div id="movieInfo">
+                    <div id="moviePoster"></div>
+                    <div id="rightconer">
+                        <div id="movieText"></div>
+                        <div id="likeOrDislikeBtns" hidden>
+                            <button id="likeBtn"><i class="fa-solid fa-thumbs-up"></i></button>
+                            <button id="dislikeBtn"><i class="fa-solid fa-thumbs-down"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

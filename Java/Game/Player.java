@@ -30,11 +30,11 @@ public class Player implements Serializable {
         if(this._hp > 90 && this._coin > 20){
             this._hp = 100;
             this._coin -= 20;
-            System.out.println("Hp +5\n Your hp: "+this._hp+"\n Your coin now: "+this._coin+"\n ");
+            System.out.println("Hp +10\n Your hp: "+this._hp+"\n Your coin now: "+this._coin+"\n ");
         }else if(this._hp < 100 && this._coin > 20){
             this._hp += 10;
             this._coin -= 20;
-            System.out.println("Hp +5\n Your hp: "+this._hp+"\n Your coin now: "+this._coin+"\n ");
+            System.out.println("Hp +10\n Your hp: "+this._hp+"\n Your coin now: "+this._coin+"\n ");
         }
     }
     public void LossHp(int dame){

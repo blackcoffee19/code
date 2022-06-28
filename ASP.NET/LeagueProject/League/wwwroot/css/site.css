@@ -80,3 +80,12 @@ body {
   width: 75%;
   height: fit-content;
 }
+#cart {
+  display: flex;
+  flex-direction: column;
+}
+.cart-place{
+  border: #a56d53 1px;
+  border-radius: 20px;
+  margin: 5px 10px;
+}
