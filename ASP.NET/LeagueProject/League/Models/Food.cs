@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Xml.Serialization;
 using System.Xml.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace League.Models
 {

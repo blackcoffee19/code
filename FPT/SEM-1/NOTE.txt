@@ -1,0 +1,11 @@
+C has 32 keywords
+* interpret: phiên dịch 
+* compile: biên dịch
+C is compile file
+source code : *.cpp -------> Byte code: *.exe
+Algorithm : giải thuật - 
+1. Công cụ (compile) -> Code tạo App
+2. Tiếp nhận bài toán (problem) từ KH  -> Hướng giải quyết (giải thủật)
+3. Mô tả giải thuật mã giả( pseudo code)
+
+Variables provide a name for the memory location

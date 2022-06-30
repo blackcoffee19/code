@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PHP</title>
+    </head>
+    <body>
+        <h1>$_REQUEST: <?php print_r($_REQUEST);?></h1>
+        <h1>$_GET: <?php print_r($_GET);?></h1>
+        <h1>$_POST: <?php print_r($_POST);?><h1>
+        <form method="get">
+            GET form: <input type="text" name="get_name">
+            <input type="submit" value="Get">
+        </form>
+        <form method="post">
+            POST form: <input type="text" name="post_name">
+            <input type="submit" value="Post">
+        </form>
+        <a href="index.php">Reset</a>
+    </body>
+</html>

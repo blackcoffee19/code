@@ -7,33 +7,37 @@
     <div style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;">
     @foreach(var cake in Model.Cakes)
     {
-        <div class="card" style="width: 18rem;">
-            <img src=@cake.ImgURL class="card-img-top rounded" alt="@cake.Name" style="height:252px;">
-            <div class="card-body">
-                <h5 class="card-title">@cake.Name</h5>
-                <p class="card-text">&#9733; @cake.Rating</p>
-                <h6 class="card-text">$@cake.Prices</h6>
-                <p class="card-text">@cake.Ingredients</p>
-                <form method="post">
-                    <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
-                    <input type="hidden" value="@cake.ID" name="ID" />
-                </form>
+        <form method="post">
+            <div class="card" style="width: 18rem;">
+                <img src=@cake.ImgURL class="card-img-top rounded" alt="@cake.Name" style="height:252px;">
+                <div class="card-body">
+                    <h5 class="card-title">@cake.Name</h5>
+                    <input type="hidden" id="Name" name="Name" value="@cake.Name">
+                    <p class="card-text">&#9733; @cake.Rating</p>
+                    <h6 class="card-text price">$@cake.Prices</h6>
+                    <input type="hidden" id="Prices" name="Prices" value="@cake.Prices">
+                    <p class="card-text">@cake.Ingredients</p>
+                    @* <button id="@cake.Name">Add to cart</button> *@
+                        <input type="submit" id="submit" value="Add" class="btn btn-sm btn-primary"/>
+                        @* <input type="hidden" value="@cake.ID" name="ID" /> *@
+                </div>
             </div>
-        </div>
+        </form>
     }
     @foreach(var drink in Model.Drinks)
     {
         <div class="card" style="width: 18rem;">
             <img src=@drink.ImgURL class="card-img-top rounded" alt="@drink.Name" style="height:252px;">
             <div class="card-body">
-                <h5 class="card-title">@drink.Name</h5>
+                <h5 class="card-title name">@drink.Name</h5>
                 <p class="card-text">&#9733; @drink.Rating</p>
-                <h6 class="card-text">$@drink.Prices</h6>
+                <h6 class="card-text price">$@drink.Prices</h6>
                 <p class="card-text">@drink.Ingredients</p>
-                <form method="post">
+                <button id="@drink.Name">Add to cart</button>
+                @* <form method="post">
                     <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
                     <input type="hidden" value="@drink.ID" name="ID" />
-                </form>
+                </form> *@
             </div>
         </div>
     }
@@ -42,14 +46,15 @@
         <div class="card" style="width: 18rem;">
             <img src=@ff.ImgURL class="card-img-top rounded" alt="@ff.Name" style="height:252px;">
             <div class="card-body">
-                <h5 class="card-title">@ff.Name</h5>
+                <h5 class="card-title name">@ff.Name</h5>
                 <p class="card-text">&#9733; @ff.Rating</p>
-                <h6 class="card-text">$@ff.Prices</h6>
+                <h6 class="card-text price">$@ff.Prices</h6>
                 <p class="card-text">@ff.Ingredients</p>
-                <form method="post">
+                <button id="@ff.Name">Add to cart</button>
+                @* <form method="post">
                     <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
                     <input type="hidden" value="@ff.ID" name="ID" />
-                </form>
+                </form> *@
                             
             </div>
         </div>
@@ -58,6 +63,4 @@
     <div id="cart">
         
     </div>
-</div>
-<hr style="color:#a56d53; margin:5px 0; width:100%;">
-        
+</div>  

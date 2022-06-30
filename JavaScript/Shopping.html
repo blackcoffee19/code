@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shopping</title>
+        <link rel="stylesheet" href="style2.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="/script/shopping.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 justify-content-center">
+                <div class="container">
+                    <a class="navbar-brand" href="/Shopping.html">League</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"href="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Shopping.html">Shopping!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"  href="/Movie.html">Movie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Rebranch-post.html">Rebranch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/WordRisk-Get.html">Wordrisk</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div id="listitem">
+                <div class="container">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://thescranline.com/wp-content/uploads/2021/09/Matcha-Mousse-Cake-01.jpg" class="card-img-top rounded" alt="MatchaCake" style="height:252px;">
+                        <div class="card-body">
+                            <h5 class="card-title" id="matcha">Matcha Cake</h5>
+                            <p class="card-text">&#9733; 5.0</p>
+                            <h6 class="card-text price">$30</h6>
+                            <button class="Add" onclick="addToCart(matcha)">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.labonelfinebaking.shop/wp-content/uploads/2021/02/CLASSIC-CHOCOLATE-CAKE.jpg" class="card-img-top rounded" alt="ChocolateCake" style="height:252px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Cake</h5>
+                            <p class="card-text">&#9733; 4.8</p>
+                            <h6 class="card-text price">$33.2</h6>
+                            <button class="Add">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://static.fanpage.it/wp-content/uploads/sites/22/2021/02/corn-cake-recipe-1200x1200.jpg" class="card-img-top rounded" alt="CornCake" style="height:252px;">
+                        <div class="card-body">
+                            <h5 class="card-title name">Corn Cake</h5>
+                            <p class="card-text">&#9733; 5.0</p>
+                            <h6 class="card-text price">$32</h6>
+                            <button class="Add">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.pinimg.com/originals/fc/e2/50/fce250f1150735ca3b9b0d2e88112212.jpg" class="card-img-top rounded" alt="LoveCake" style="height:252px;">
+                        <div class="card-body">
+                            <h5 class="card-title name">Love Cake</h5>
+                            <p class="card-text">&#9733; 4.5</p>
+                            <h6 class="card-text price">$35</h6>
+                            <button class="Add">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.thespruceeats.com/thmb/rWDqrdAYSe1JwVYFG77kobb50UY=/3385x3385/smart/filters:no_upscale()/banana-cake-recipe-with-banana-frosting-3051121-hero-01-1bfed2aa94a8423db56f707f3eb84ac2.jpg" class="card-img-top rounded" alt="BananaCake" style="height:252px;">
+                        <div class="card-body">
+                            <h5 class="card-title name">Banana Cake</h5>
+                            <p class="card-text">&#9733; 4.5</p>
+                            <h6 class="card-text price">$27.5</h6>
+                            <button class="Add">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cart">
+
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="/script/shopping.js"></script>
+    </body>
+</html>

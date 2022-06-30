@@ -1,0 +1,100 @@
+html {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin-bottom: 60px;
+    background-color: #FFF6EE;
+  }
+  #jum {
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #con-jum{
+    height: 30rem;
+    background-image: url("https://thumbs.dreamstime.com/b/bakery-seamless-background-baking-doodle-vector-pattern-pastry-sketches-hand-drawn-cakes-pies-wallpaper-bread-objects-157631532.jpg");
+  }
+  .nav-link:hover .nav-link:active{
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #a56d53!important;
+  }
+  .cus-nav-active{
+    background-color: #a56d53 !important;
+    color:#FFFFFF !important;
+    height: 100px;
+    padding:1.5rem 1rem;
+    border:1px solid #a56d53!important;
+    font-size:2em;
+    border-radius:1rem!important;
+  }
+  .cus-nav{
+    background-color:#d8aa88!important;
+    color:#FFFFFF;
+    height: 100px;
+    padding:1.5rem 1rem;
+    border:1px solid #a56d53!important;
+    font-size:2em;
+    border-radius:1rem!important;
+  }
+  .carousel-item > img {
+    width: auto;
+    margin: auto;
+    height: 100%;
+  }
+  .carousel-item{
+    height: 40rem;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container > .nav-item{
+    background-color: #d8aa88;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  .nav-item > a :hover {
+    background-color: #a56d53!important;
+    color: #fff;
+  }
+  #formside {
+    background-color: aliceblue;
+    width: 75%;
+    height: fit-content;
+  }
+  #listitem{
+    width: 80%;
+  }
+  #cart {
+    display: flex;
+    flex-direction: column;
+    background-color: #d8aa88;
+    color: #a56d53;
+  }
+  .cart-place{
+    border: #a56d53 1px;
+    border-radius: 20px;
+    margin: 5px 10px;
+  }
