@@ -63,11 +63,11 @@ namespace League.Pages
             Cakes = await cake.ToListAsync();
             Drinks = await drink.ToListAsync();
             FastFoods = await ff.ToListAsync();
-            Name = "Null";
-            Prices = 23.3;
-            using (StreamWrite write = new StreamWrite("log.txt", append: true)){
-                await write.WriteLineAsync();
-            }
+            // Name = "Null";
+            // Prices = 23.3;
+            // using (StreamWrite write = new StreamWrite("log.txt", append: true)){
+            //     await write.WriteLineAsync();
+            // }
         }
         public async Task<IActionResult> OnPostAsync(string id){
             if(id == null)

@@ -3,64 +3,68 @@
 @{
     ViewData["Title"] = "Cart page";
 }
-<div class="container" style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;">
-    <div style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;">
-    @foreach(var cake in Model.Cakes)
-    {
-        <form method="post">
-            <div class="card" style="width: 18rem;">
-                <img src=@cake.ImgURL class="card-img-top rounded" alt="@cake.Name" style="height:252px;">
-                <div class="card-body">
-                    <h5 class="card-title">@cake.Name</h5>
-                    <input type="hidden" id="Name" name="Name" value="@cake.Name">
-                    <p class="card-text">&#9733; @cake.Rating</p>
-                    <h6 class="card-text price">$@cake.Prices</h6>
-                    <input type="hidden" id="Prices" name="Prices" value="@cake.Prices">
-                    <p class="card-text">@cake.Ingredients</p>
-                    @* <button id="@cake.Name">Add to cart</button> *@
-                        <input type="submit" id="submit" value="Add" class="btn btn-sm btn-primary"/>
-                        @* <input type="hidden" value="@cake.ID" name="ID" /> *@
+<div class="cont">
+    <div style="display:flex; flex-direction: row;margin-top:20px;flex-wrap: wrap;width:85%;">
+        @foreach(var cake in Model.Cakes)
+        {
+            <form method="post">
+                <div class="card" style="width: 15rem;height:470px;">
+                    <img src=@cake.ImgURL class="card-img-top rounded" alt="@cake.Name" style="height:252px;">
+                    <div class="card-body">
+                        <h5 class="card-title">@cake.Name</h5>
+                        <p class="card-text">&#9733; @cake.Rating</p>
+                        <h6 class="card-text price">$@cake.Prices</h6>
+                        <p class="card-text">@cake.Ingredients</p>
+                        <input type="button" value="Add" onclick="addToList('@cake.Name',@cake.Prices)" class="btn btn-sm btn-primary">
+                            @* <input type="hidden" value="@cake.ID" name="ID" /> *@
+                    </div>
                 </div>
-            </div>
-        </form>
-    }
-    @foreach(var drink in Model.Drinks)
-    {
-        <div class="card" style="width: 18rem;">
-            <img src=@drink.ImgURL class="card-img-top rounded" alt="@drink.Name" style="height:252px;">
-            <div class="card-body">
-                <h5 class="card-title name">@drink.Name</h5>
-                <p class="card-text">&#9733; @drink.Rating</p>
-                <h6 class="card-text price">$@drink.Prices</h6>
-                <p class="card-text">@drink.Ingredients</p>
-                <button id="@drink.Name">Add to cart</button>
-                @* <form method="post">
-                    <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
-                    <input type="hidden" value="@drink.ID" name="ID" />
-                </form> *@
-            </div>
-        </div>
-    }
-    @foreach(var ff in Model.FastFoods)
-    {
-        <div class="card" style="width: 18rem;">
-            <img src=@ff.ImgURL class="card-img-top rounded" alt="@ff.Name" style="height:252px;">
-            <div class="card-body">
-                <h5 class="card-title name">@ff.Name</h5>
-                <p class="card-text">&#9733; @ff.Rating</p>
-                <h6 class="card-text price">$@ff.Prices</h6>
-                <p class="card-text">@ff.Ingredients</p>
-                <button id="@ff.Name">Add to cart</button>
-                @* <form method="post">
-                    <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
-                    <input type="hidden" value="@ff.ID" name="ID" />
-                </form> *@
-                            
-            </div>
-        </div>
-    }
+            </form>
+        }
+        @foreach(var drink in Model.Drinks)
+        {   
+            <form>
+                <div class="card" style="width: 15rem;height:470px;">
+                    <img src=@drink.ImgURL class="card-img-top rounded" alt="@drink.Name" style="height:252px;">
+                    <div class="card-body">
+                        <h5 class="card-title name">@drink.Name</h5>
+                        <p class="card-text">&#9733; @drink.Rating</p>
+                        <h6 class="card-text price">$@drink.Prices</h6>
+                        <p class="card-text">@drink.Ingredients</p>
+                        <input type="button" value="Add" id="submit" onclick="addToList('@drink.Name', @drink.Prices)" class="btn btn-sm btn-primary">
+                        @* <form method="post">
+                            <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
+                            <input type="hidden" value="@drink.ID" name="ID" />
+                        </form> *@
+                    </div>
+                </div>
+            </form>
+        }
+        @foreach(var ff in Model.FastFoods)
+        {
+            <form>
+                <div class="card" style="width: 15rem;height:470px;">
+                    <img src=@ff.ImgURL class="card-img-top rounded" alt="@ff.Name" style="height:252px;">
+                    <div class="card-body">
+                        <h5 class="card-title name">@ff.Name</h5>
+                        <p class="card-text">&#9733; @ff.Rating</p>
+                        <h6 class="card-text price">$@ff.Prices</h6>
+                        <p class="card-text">@ff.Ingredients</p>
+                        @* <form method="post">
+                            <input type="submit" value="Add" class="btn btn-sm btn-primary"/>
+                            <input type="hidden" value="@ff.ID" name="ID" />
+                        </form> *@
+                        <input type="button" id="submit" value="Add" onclick="addToList('@ff.Name', @ff.Prices)" class="btn btn-sm btn-primary">
+                    </div>
+                </div>
+            </form>
+        }
     </div>
-    <div id="cart">
-        
+    <div id="rightside">
+        <div id="cart">
+            <h3>&#9745;Cart:</h3>
+            <ol id="list">
+            </ol>
+        </div>
     </div>
 </div>  

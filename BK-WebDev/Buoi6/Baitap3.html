@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài tập 3</title>
+        <meta charset="UTF-8">
+        <script>
+            const funct = ()=>{
+                if(document.getElementById("text").hidden){
+                    document.getElementById("text").hidden=false;
+                } else {
+                    document.getElementById("text").hidden=true;
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <h1 align="center"><font color="#660C0A">ĐĂNG NHẬP</font></h1>
+        <table align="center" bgcolor="#E2F8EB" border="1px"bordercolor="#660C0A"cellspacing="0"cellpadding="5">
+            <form>
+                <tr>
+                    <td>Tên đăng nhập:</td>
+                    <td><input type="text" name="nameaccount"></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu:</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" value="Đồng ý" onclick="funct()"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><p id="text" hidden><font color="blue"><b>Đăng nhập thành công !!!</b></font></p></td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>

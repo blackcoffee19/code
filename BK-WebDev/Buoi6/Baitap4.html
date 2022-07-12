@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script>
+            function myFunc(){
+                if(document.getElementById("text").hidden){
+                    document.getElementById("text").hidden = false;
+                } else{
+                    document.getElementById("text").hidden = true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1><font color="green">Phiếu đăng ký tham gia chương trình khuyến mãi</font></h1>
+        <table width="600px" bgcolor="#E1FADA" border="1px" bordercolor="darkgreen" cellspacing="0" cellpadding="2">
+            <form>
+                <tr>
+                    <td width="40%"><font color="green">Họ và tên</font></td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td width="40%"><font color="green">Địa chỉ</font></td>
+                    <td><input type="text" name="address"></td>
+                </tr>
+                <tr>
+                    <td width="40%"><font color="green">Điện thoại</font></td>
+                    <td><input type="number" name="tele"></td>
+                </tr>
+                <tr>
+                    <td width="40%"><font color="green">Phái</font></td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Nam
+                        <input type="radio" name="gender" value="femal"> Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td width="40%"><font color="green">Nghề nghiệp</font></td>
+                    <td>
+                        <select id="major" name="major">
+                            <option value="teacher">Giáo viên</option>
+                            <option value="doctor">Bác sĩ</option>
+                            <option value="engineer">Kỹ sư</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="40%"><font color="green">Chọn sản phẩm tham gia</font></td>
+                    <td>
+                        <select id="list_item" name="items" size="4" multiple>
+                            <option value="toothpaste">Kem đánh răng</option>
+                            <option value="washing_powder">Bột giặt</option>
+                            <option value="shampoo">Dầu gội đầu</option>
+                            <option value="shower_gel">Sữa tắm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="40%"><font color="green">Số người tham gia</font></td>
+                    <td><input type="number" name="quantity"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" value="Đồng ý" onclick="myFunc()"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><p id="text" hidden><font color="#BF385B"><b>Bạn đã đăng ký thành công!!!</b></font></p></td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>

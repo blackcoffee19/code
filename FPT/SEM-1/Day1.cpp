@@ -19,5 +19,18 @@ int main() {
 		//3. Hiển thị C
 		printf("Tong A va B la: %d\n", C);
 	//Kết thúc
+		//1. Khai báo
+		int n;
+		//2. Khởi tạo
+		n =10;
+		//3. Khai báo và khởi tạo
+		float m =10.5;
+		//4. Hiển thị 
+		printf("Gia tri so nguyen n: %d\n", n);
+		printf("Gia tri so thuc %f\n", m);
+		printf("Gia tri so thuc m có 2 so le: %.2f\n", m);
+
 	return 0;
+
+
 }
