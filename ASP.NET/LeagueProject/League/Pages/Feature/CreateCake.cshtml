@@ -3,16 +3,12 @@
 @{
     ViewData["Title"] = "Create Cake";
 }
-<div class="alert alert-danger" role="alert">
-  @Model.ExceptionE
-</div>
-<div class="container" id="formside">
+<div class="container" id="form-side">
     <form method="post">
         <div class="row mb-3">                
             <label asp-for="NewCake.Name" class="col-sm-2 col-form-label">Name:</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" asp-for="NewCake.Name" placeholder="Enter name of cake">
-                <span class="text-danger" asp-validation-for="NewCake.Name"></span>
             </div>
         </div>
         <div class="row mb-3">
@@ -25,7 +21,6 @@
             <label asp-for="NewCake.Calories" class="col-sm-2 col-form-label">Calories:</label>
             <div class="col-sm-10">
                 <input type="number" class="form-control" asp-for="NewCake.Calories" placeholder="Enter Calories">
-                <span class="text-danger" asp-validation-for="NewCake.Calories"></span>
             </div>
         </div>
         <div class="row mb-3">

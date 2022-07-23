@@ -5,6 +5,7 @@ namespace League.Models
 {
     public class Cake
     {
+        [Required]
         public int ID {get;set;}
         [Required(ErrorMessage ="You should and name of this cake.")]
         public string? Name {get;set;}

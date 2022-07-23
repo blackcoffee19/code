@@ -18,7 +18,7 @@ namespace League.Pages.Feature
             _context = context;
         }
         [BindProperty]
-        public Cake? NewCake {get;set;} = default!;
+        public Cake NewCake {get;set;} = default!;
         public string modal {get;set;}
         public string Type {get;set;}
         public string ExceptionE {get;set;}

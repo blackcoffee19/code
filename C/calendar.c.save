@@ -1,0 +1,221 @@
+#include <stdio.h>
+#include <stdbool.h>
+bool is_leap_year(int year){
+  if(year%4 != 0){
+    return false;
+  } else{
+    if(year %100 != 0){
+      return true;
+    } else if(year%100 == 0 && year%400 != 0){
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+void add_days_to_date(int mm, int dd, int yy, int days_left_to_add){
+  switch(mm){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      int days_in_month[31];
+      for(int i = 0; i < 31; i++){
+        int j = i+1;
+        days_in_month[i] = j;
+      };
+      if(days_left_to_add <= (31-dd)){
+        dd += days_left_to_add;
+      } else {
+        dd = 31%(days_left_to_add - (31-dd));
+        do{
+          mm++;
+          days_left_to_add -= 31;
+        } while(days_left_to_add >= 31);
+      };
+        if(mm > 12){
+          mm = 12- mm; 
+        };
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      int days_in_month2[30];
+      for(int i = 0; i < 30; i++){
+        int j = i+1;
+        days_in_month[i] = j;
+      };
+      if(days_left_to_add <= (30-dd)){
+        dd += days_left_to_add;
+      } else {
+        dd = 30%(days_left_to_add - (30-dd));
+        do{
+          mm++;
+          days_left_to_add -= 30;
+        } while(days_left_to_add >= 30);
+      };
+        if(mm > 12){
+          mm = 12- mm; 
+        };
+      break;
+      case 2:
+      if(is_leap_year(yy)){
+        
+        for(int i = 0; i < 29; i++){
+          int j = i+1;
+          days_in_month[i] = j;
+        };
+      } else {
+        int days_in_month3[28];
+        for(int i = 0; i < 28; i++){
+          int j = i+1;
+          days_in_month[i] = j;
+        };
+      };
+	int days_in_month3[];
+#include <stdio.h>
+#include <stdbool.h>
+bool is_leap_year(int year){
+  if(year%4 != 0){
+    return false;
+  } else{
+    if(year %100 != 0){
+      return true;
+    } else if(year%100 == 0 && year%400 != 0){
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+void add_days_to_date(int mm, int dd, int yy, int days_left_to_add){
+  switch(mm){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      int days_in_month[31];
+      for(int i = 0; i < 31; i++){
+        int j = i+1;
+        days_in_month[i] = j;
+      };
+      if(days_left_to_add <= (31-dd)){
+        dd += days_left_to_add;
+      } else {
+        dd = 31%(days_left_to_add - (31-dd));
+        do{
+          mm++;
+          days_left_to_add -= 31;
+        } while(days_left_to_add >= 31);
+      };
+        if(mm > 12){
+          mm = 12- mm; 
+        };
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      int days_in_month2[30];
+      for(int i = 0; i < 30; i++){
+        int j = i+1;
+        days_in_month[i] = j;
+      };
+      if(days_left_to_add <= (30-dd)){
+        dd += days_left_to_add;
+      } else {
+        dd = 30%(days_left_to_add - (30-dd));
+        do{
+          mm++;
+          days_left_to_add -= 30;
+        } while(days_left_to_add >= 30);
+      };
+        if(mm > 12){
+          mm = 12- mm; 
+        };
+      break;
+      case 2:
+      if(is_leap_year(yy)){
+        int days_in_month3[29];
+        for(int i = 0; i < 29; i++){
+          int j = i+1;
+          days_in_month[i] = j;
+        };
+      } else {
+        int days_in_month3[28];
+        for(int i = 0; i < 28; i++){
+          int j = i+1;
+          days_in_month[i] = j;
+        };
+      };
+      int day_of_mont = sizeof(days_in_month3)/sizeof(int);
+      if(days_left_to_add <= (day_of_mont-dd)){
+        dd += days_left_to_add;
+      } else {
+        dd = day_of_mont%(days_left_to_add - (day_of_mont-dd));
+        do{
+          mm++;
+          days_left_to_add -= day_of_mont;
+        } while(days_left_to_add >= day_of_mont);
+      };
+        if(mm > 12){
+          mm = 12- mm; 
+        };
+      break;
+      default:
+        printf("Invalid month!");
+        break;
+  }
+}
+int main() {
+  printf("Enter year: ");
+  int year, mm, dd,yy,days_left_to_add;
+  scanf("%d",&year);
+  if(is_leap_year(year)){
+    printf("Leap Year!\n");
+  }else{
+    printf("Not Leap Year!\n");
+  };
+  scanf("%d\t%d\t%d\t%d",&mm,&dd,&yy,&days_left_to_add);
+  add_days_to_date(*mm,*dd,*yy,days_left_to_add);
+}
+      int day_of_mont = sizeof(days_in_month3)/sizeof(int);
+      if(days_left_to_add <= (day_of_mont-dd)){
+        dd += days_left_to_add;
+      } else {
+        dd = day_of_mont%(days_left_to_add - (day_of_mont-dd));
+        do{
+          mm++;
+          days_left_to_add -= day_of_mont;
+        } while(days_left_to_add >= day_of_mont);
+      };
+        if(mm > 12){
+          mm = 12- mm; 
+        };
+      break;
+      default:
+        printf("Invalid month!");
+        break;
+  }
+}
+int main() {
+  printf("Enter year: ");
+  int year, mm, dd,yy,days_left_to_add;
+  scanf("%d",&year);
+  if(is_leap_year(year)){
+    printf("Leap Year!\n");
+  }else{
+    printf("Not Leap Year!\n");
+  };
+  scanf("%d\t%d\t%d\t%d",&mm,&dd,&yy,&days_left_to_add);
+  add_days_to_date(*mm,*dd,*yy,days_left_to_add);
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PHP</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body bgcolor="#06283D">
+        <header height="20%">
+            <div id="logo">
+                <h1>Sign in</h1>
+            </div>
+        </header>
+        <main height="70%">
+            <div class="form" action="Signin.php">
+                <table>
+                <form method="post">
+                    <tr>
+                        <td><h2>Username:</h2></td>
+                        <td><input type="text" name="username" value="<?=$username?>"><br><span><?php echo $username_err?></span></td>
+                    <tr> 
+                    <tr>
+                        <td><h2>Password:</h2></td>
+                        <td><input type="password" name="password1"></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Rewrite password:</h2></td>
+                        <td><input type="password" name="password2"><br><span><?php echo $password_err?></span></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Email:</h2></td>
+                        <td><input type="text" name="email" value="<?=$email?>"><br><span><?php echo $email_err?></span></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Name:</h2></td>
+                        <td><input type="text" name="name" value="<?=$name?>"><br><span><?php echo $name_err?></span></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Gender:</h2></td>
+                        <td><input type="radio" name="gender" value="female"> Female &nbsp; <input type="radio" name="gender" value="male"> Male<br><span><?php echo $gender_err?></span></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Day: </h2></td>
+                        <td><input type="number" name="day" value="<?=$day?>"><br><span><?php echo $day_err?></span></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Month: </h2></td>
+                        <td><input type="number" name="month" value="<?=$month?>"><br><span><?php echo $month_err?></span></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Year: </h2></td>
+                        <td><input type="number" name="year" value="<?=$year?>"><br><span><?php echo $year_err?></span></td>
+                    </tr>
+                    <tr>
+                        <td cols="2">
+                            <center><input type="submit" value="Logins"></center>
+                        </td>
+                    </tr>
+                </form>
+                </table>
+                <a href="index.php">Reset</a>
+            </div>
+            <div class="profie">
+                <button onclick="hideAndShow()">Show</button>
+                <div id="output">
+                    <p>Name : <?=$new_user->getName()?></p>
+                    <p>Gender: <?=$new_user->getGender()?></p>
+                    <p>Birthday: <?=$new_user->getBirthday()?></p>
+                </div>
+            </div>        
+        </main>
+        <footer height="10%"></footer>
+        <script>
+            function hideAndShow(){
+                if(document.getElementById("output").style.display = "block"){
+                    document.getElementById("output").style.display = "none";
+                }else{
+                    document.getElementById("output").style.display = "block";
+                };
+            }
+        </script>
+    </body>
+</html>
